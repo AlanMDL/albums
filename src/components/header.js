@@ -3,14 +3,14 @@ import React from 'react';
 import { Text, View } from 'react-native';
 
 // make a component
-const Header = () => {
+const Header = (props) => {
     const { textStyle, viewStyle } = styles;
 
-    return(
+    return (
         <View style={viewStyle}>
-             <Text style={textStyle}>Albums</Text>
+             <Text style={textStyle}>{props.headerText}</Text>
         </View>
-    )
+    );
 };
 
 const styles = {
